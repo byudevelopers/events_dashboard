@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "trevor_lane",
+  "homepage": "http://dev.byu.edu/events/",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

@@ -48,8 +48,18 @@ class App extends Component {
         return itemX > itemY ? -1 : itemX < itemY ? 1 : 0;
       })
       .filter(item => {
+        // console.log("item date: ", new Date(item.Date));
+        // console.log("new date: ", new Date().getDate() + 1);
+
+        // gets item date and adds one day to it, so that the item
+        // stays on the dashboard until the day after the event
+        let itemDate = new Date(item.Date);
+        itemDate.setDate(itemDate.getDate() + 1);
+
+        //  console.log("tomorrow: ", itemDate);
+
         // filters out past events
-        if (new Date(item.Date) > new Date()) {
+        if (itemDate > new Date()) {
           return item;
         }
       })
